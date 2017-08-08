@@ -1,6 +1,6 @@
 Twitter search engine project:
 
-We have created a search application that is used to search tweets from the dataset by entering a sentence or a word in the input text box provided. The dataset that is used here is the airlines dataset which contains information about the user’s reviews on different airlines. This search engine will provide the user with the most relevant information according to the search query. In order to have a clear idea about the data we have represented it visually.
+Created a search application that is used to search tweets from the dataset by entering a sentence or a word in the input text box provided. The dataset that is used here is the airlines dataset which contains information about the user’s reviews on different airlines. This search engine will provide the user with the most relevant information according to the search query. In order to have a clear idea about the data I have represented it visually.
 Installation:
 1. Install MongoDB 
 2. Create a MongoDB database called 'testdata'
