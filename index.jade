@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    div(class="head")
+        hr
+        img(src="images/Twitter-Tips.png" width="40%" style="clear:both;margin-right:10%;" align="right")
+        h1= title
+        hr
+      div(class="container")
+            a(href="/")="Home"
+            a(href="/index")= "Search here"
+            a(href="/graphcis")="Visual Representation"
+            hr
+            h1= " Enter the text you want to search from tweets "
+            form#formSearchUser(name="search",method="post",action="/userlist")
+                input#inputUserName(type="text", placeholder="Enter the text", name="username")
+                
+                br
+                button#btnSubmit(type="submit") Submit
+            br
+            br        
+            br        
+            a(href="../")= "Home Page"

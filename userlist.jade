@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    div(class="head")
+        hr
+        img(src="images/Twitter-Tips.png" width="10%" style="clear:both;margin-right:10%;" align="right")
+        h1= title
+    div(class)
+    h1.
+        List of Tweets  
+    h2="Total no of tweets = "+userlist.length 
+
+
+        p Showing search result for your query #{global2} 
+        br          
+    table(style="width:100%; border:solid 2px black;border-collapse: collapse;padding:2px;")
+        tr
+            th User ID
+            th User Name 
+            th Tweet
+            th Created Time 
+           
+        
+        each user, i in userlist
+            tr
+                td
+                    a(href="/comments/#{user.id}" id=user.id )= user.fromUser
+                td
+                    #{user.name}=user.fromUserName
+                td
+                    #{user.text}=user.text
+                td
+                    #{user.time}=user.createdAt
+                
+            
+                 
+                            

@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    h1= title
+    br
+    ul
+        li 
+            strong ID:
+            label #{docs[0].id}
+        li 
+            strong UserName:
+            label #{docs[0].fromUser}
+        li 
+            strong User ID:
+            label #{docs[0].fromUserId}
+        li 
+            strong Name:
+            label #{docs[0].fromUserName}
+        li 
+            strong Twitter ID:
+            label #{docs[0].twitterTweetId}
+        li 
+            strong Language:
+            label #{docs[0].LanguageCode}
+        li 
+            strong Image URL:
+            label #{docs[0].profileImageUrl}
+        li 
+            strong Source:
+            label #{docs[0].source}
+        li 
+            strong Text:
+            label #{docs[0].text}
+        li 
+            strong Latitude:
+            label #{docs[0].latitude}
+        li 
+            strong Longitude:
+            label #{docs[0].longitude}
+        li 
+            strong Created Time:
+            label #{docs[0].createdAt}
+        li 
+           strong Annotations:
+           label #{docs[0].comment}
+    br
+    form#formAddUser(name="Comments",method="post",action="/comments" onsubmit="Redirect();")
+        input#inputComments(type="text", placeholder="Type your comment here...",name="Comment" required)
+        br
+        input(type="hidden" name="id" value="")
+        button#btnSubmit(type="submit") submit
+    br
+    br 
+    a(href="../")= "Home Page"
